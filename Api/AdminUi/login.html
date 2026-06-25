@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kawach Admin Login</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-login-body">
+  <main class="login-shell">
+    <section class="login-brand">
+      <div class="brand-mark">K</div>
+      <p class="eyebrow">Kawach Administration</p>
+      <h1>Assessment reporting, kept private.</h1>
+      <p>Only authorised administrators can view participant details, assessment timings, scores and selected answers.</p>
+    </section>
+
+    <section class="login-card">
+      <div class="login-card-heading">
+        <span>Secure area</span>
+        <h2>Admin login</h2>
+        <p>Enter the administrator credentials to continue.</p>
+      </div>
+
+      <form id="admin-login-form">
+        <label>
+          Username
+          <input name="username" autocomplete="username" maxlength="100" required autofocus>
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" autocomplete="current-password" maxlength="200" required>
+        </label>
+        <p id="login-error" class="form-error" role="alert" hidden></p>
+        <button type="submit">Sign in</button>
+      </form>
+
+      <a class="back-link" href="/">← Return to assessment</a>
+    </section>
+  </main>
+  <script src="/admin-login.js"></script>
+</body>
+</html>

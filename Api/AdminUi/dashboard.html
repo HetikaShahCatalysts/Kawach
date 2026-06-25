@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kawach Admin Dashboard</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="/admin">
+        <span class="brand-mark small">K</span>
+        <span><strong>Kawach</strong><small>Administration</small></span>
+      </a>
+
+      <nav aria-label="Admin navigation">
+        <p>Reporting</p>
+        <button class="nav-item active" type="button">
+          <span>▦</span> View Assessments
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/">Open assessment</a>
+        <button id="logout-button" type="button">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Admin dashboard</p>
+          <h1>View Assessments</h1>
+          <p>Review participant submissions, completion times, scores and selected answers.</p>
+        </div>
+        <div class="admin-badge"><span></span> Admin</div>
+      </header>
+
+      <section class="summary-grid" aria-label="Assessment summary">
+        <article><span>Total records</span><strong id="total-records">—</strong></article>
+        <article><span>Current page</span><strong id="current-page">—</strong></article>
+        <article><span>Page size</span><strong id="page-size-display">25</strong></article>
+      </section>
+
+      <section class="report-panel">
+        <div class="report-toolbar">
+          <form id="assessment-search">
+            <label class="sr-only" for="search-input">Search by user name</label>
+            <input id="search-input" name="search" placeholder="Search by user name">
+            <button type="submit">Search</button>
+            <button id="clear-search" class="secondary-button" type="button">Clear</button>
+          </form>
+          <button id="refresh-button" class="secondary-button" type="button">Refresh</button>
+        </div>
+
+        <p id="dashboard-error" class="form-error" role="alert" hidden></p>
+        <div class="table-wrap">
+          <table class="assessment-table">
+            <thead>
+              <tr>
+                <th>User name</th>
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Total time</th>
+                <th>Total score</th>
+                <th>Status</th>
+                <th><span class="sr-only">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="assessment-rows"></tbody>
+          </table>
+          <div id="empty-state" class="empty-state" hidden>No assessments found.</div>
+        </div>
+
+        <footer class="pagination">
+          <span id="pagination-summary"></span>
+          <div>
+            <button id="previous-page" class="secondary-button" type="button">Previous</button>
+            <button id="next-page" class="secondary-button" type="button">Next</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="answers-dialog" class="answers-dialog">
+    <div class="dialog-header">
+      <div>
+        <p class="eyebrow">Assessment answers</p>
+        <h2 id="dialog-title">Selected answers</h2>
+        <p id="dialog-meta"></p>
+      </div>
+      <button id="close-dialog" class="icon-button" type="button" aria-label="Close">×</button>
+    </div>
+    <div id="dialog-content" class="dialog-content"></div>
+  </dialog>
+
+  <script src="/admin-dashboard.js"></script>
+</body>
+</html>

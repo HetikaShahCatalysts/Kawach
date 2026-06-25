@@ -1,0 +1,83 @@
+{
+  "_instructions": "Replace or extend this file with the approved content mapping. Keys must match data-question-code and data-answer-code in both HTML versions.",
+  "steps": {
+    "RISK_ASSESSMENT": {
+      "english": "Risk Assessment",
+      "hindi": ["जोखिम मूल्यांकन"]
+    },
+    "OBSERVATION_SCORING": {
+      "english": "Observation Scoring",
+      "hindi": ["अवलोकन स्कोरिंग"]
+    }
+  },
+  "modules": {
+    "HOUSEHOLD_FACTORS": {
+      "english": "Household Factors",
+      "hindi": ["घरेलू कारक"]
+    },
+    "EDUCATION_SCHOOL_CONTINUITY": {
+      "english": "Education & School Continuity",
+      "hindi": ["शिक्षा और विद्यालय निरंतरता"]
+    }
+  },
+  "questions": {
+    "EXTREME_POVERTY": {
+      "english": "Extreme poverty or severe income deprivation",
+      "hindi": ["अत्यधिक गरीबी या गंभीर आय अभाव"]
+    },
+    "UNSAFE_HOUSING": {
+      "english": "Family living in unsafe or homeless conditions",
+      "hindi": ["परिवार असुरक्षित आवास या बेघर स्थिति में रह रहा है"]
+    },
+    "EDUCATION_BADLY_AFFECTED": {
+      "english": "Child's education badly affected by dropout, absence, work during school hours, substance use, marriage or migration",
+      "hindi": ["बच्चे की शिक्षा स्कूल छोड़ने, अनुपस्थिति, स्कूल के समय काम, नशे, विवाह या प्रवास से बुरी तरह प्रभावित है"]
+    },
+    "GIRL_RESTRICTED_AFTER_PUBERTY": {
+      "english": "Girl restricted from mobility, social contact, or school after puberty",
+      "hindi": ["यौवन के बाद लड़की की आवाजाही, सामाजिक संपर्क या स्कूल पर प्रतिबंध"]
+    }
+  },
+  "answers": {
+    "EXTREME_POVERTY:SELECTED": {
+      "english": "Selected",
+      "hindi": ["चयनित"],
+      "score": 3
+    },
+    "EXTREME_POVERTY:NOT_SELECTED": {
+      "english": "Not selected",
+      "hindi": ["चयनित नहीं"],
+      "score": 0
+    },
+    "UNSAFE_HOUSING:SELECTED": {
+      "english": "Selected",
+      "hindi": ["चयनित"],
+      "score": 2
+    },
+    "UNSAFE_HOUSING:NOT_SELECTED": {
+      "english": "Not selected",
+      "hindi": ["चयनित नहीं"],
+      "score": 0
+    },
+    "EDUCATION_BADLY_AFFECTED:SELECTED": {
+      "english": "Selected",
+      "hindi": ["चयनित"],
+      "score": 4
+    },
+    "EDUCATION_BADLY_AFFECTED:NOT_SELECTED": {
+      "english": "Not selected",
+      "hindi": ["चयनित नहीं"],
+      "score": 0
+    },
+    "GIRL_RESTRICTED_AFTER_PUBERTY:SELECTED": {
+      "english": "Selected",
+      "hindi": ["चयनित"],
+      "score": 2
+    },
+    "GIRL_RESTRICTED_AFTER_PUBERTY:NOT_SELECTED": {
+      "english": "Not selected",
+      "hindi": ["चयनित नहीं"],
+      "score": 0
+    }
+  }
+}

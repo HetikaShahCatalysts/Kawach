@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-page-version="risk-assessment-v1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kawach Risk Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <!-- STEP: stable code + readable English name -->
+    <section class="card"
+             data-assessment-step="RISK_ASSESSMENT"
+             data-step-name="Risk Assessment">
+      <div class="step-label">Step 1 — Risk Assessment</div>
+      <h1>Risk Scoring</h1>
+      <p class="intro">Select every risk factor that applies.</p>
+
+      <form data-assessment-form>
+        <!-- MODULE: all questions inside this block belong to Household Factors -->
+        <section class="question"
+                 data-assessment-module
+                 data-module-code="HOUSEHOLD_FACTORS"
+                 data-module-name="Household Factors">
+          <h2>Household Factors</h2>
+
+          <!-- QUESTION + selected ANSWER -->
+          <label class="option"
+                 data-question-code="EXTREME_POVERTY"
+                 data-question-text="Extreme poverty or severe income deprivation"
+                 data-unselected-answer-code="NOT_SELECTED"
+                 data-unselected-answer-text="Not selected">
+            <input type="checkbox"
+                   value="Selected"
+                   data-answer-code="SELECTED"
+                   data-score-delta="3">
+            Extreme poverty or severe income deprivation
+            <strong>+3</strong>
+          </label>
+
+          <label class="option"
+                 data-question-code="UNSAFE_HOUSING"
+                 data-question-text="Family living in unsafe or homeless conditions"
+                 data-unselected-answer-code="NOT_SELECTED"
+                 data-unselected-answer-text="Not selected">
+            <input type="checkbox"
+                   value="Selected"
+                   data-answer-code="SELECTED"
+                   data-score-delta="2">
+            Family living in unsafe or homeless conditions
+            <strong>+2</strong>
+          </label>
+        </section>
+
+        <p id="assessment-error" class="message error" role="alert" hidden></p>
+        <button type="submit">Save and complete</button>
+      </form>
+
+      <section id="assessment-complete" class="success" hidden>
+        <h2>Assessment completed</h2>
+        <p>Your selected risk factors have been saved.</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="tracking.js"></script>
+  <script src="assessment-form.js"></script>
+</body>
+</html>
